@@ -1,0 +1,20 @@
+package ${package}.${moduleName}.service;
+
+import com.baomidou.mybatisplus.extension.service.IService;
+import org.singledog.dogmall.core.request.BaseRequest;
+import ${package}.${moduleName}.entity.${className}Entity;
+
+import java.util.List;
+
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+public interface ${className}Service extends IService<${className}Entity> {
+
+    List<${className}Entity> query(BaseRequest request);
+}
+

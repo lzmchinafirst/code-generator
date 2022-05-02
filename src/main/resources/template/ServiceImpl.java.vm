@@ -1,0 +1,33 @@
+package ${package}.${moduleName}.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Map;
+
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.singledog.dogmall.core.request.BaseRequest;
+import ${package}.${moduleName}.mapper.${className}Mapper;
+import ${package}.${moduleName}.entity.${className}Entity;
+import ${package}.${moduleName}.service.${className}Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service("${classname}Service")
+public class ${className}ServiceImpl extends ServiceImpl<${className}Mapper, ${className}Entity> implements ${className}Service {
+
+    private ${className}Mapper mapper;
+
+    @Autowired
+    private ${className}ServiceImpl(${className}Mapper mapper) {
+        this.mapper = mapper;
+    }
+
+    @Override
+    public List<${className}Entity> query(BaseRequest request) {
+        return request.query(mapper);
+    }
+}
